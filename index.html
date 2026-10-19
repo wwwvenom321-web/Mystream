@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Stream</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#101010;color:white;font-family:Arial,sans-serif}
+header{background:#1b1b1b;padding:20px;text-align:center}
+h1{color:#ff3434;margin:0}
+nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:15px}
+button{background:#292929;color:white;border:1px solid #444;padding:12px 18px;border-radius:8px;cursor:pointer}
+button:focus,button:hover{background:#e50914}
+main{padding:20px;text-align:center}
+.card{background:#202020;border-radius:12px;padding:25px;margin:15px auto;max-width:500px}
+#message{color:#ccc;line-height:1.6}
+footer{text-align:center;color:#888;padding:20px}
+</style>
+</head>
+<body>
+<header>
+<h1>MY STREAM</h1>
+<p>Movies & Series</p>
+</header>
+<nav>
+<button onclick="show('Home')">Home</button>
+<button onclick="show('Netflix')">Netflix</button>
+<button onclick="show('Hotstar')">Hotstar</button>
+<button onclick="show('Movies')">Movies</button>
+<button onclick="show('Series')">Series</button>
+</nav>
+<main>
+<div class="card">
+<h2 id="title">Welcome!</h2>
+<p id="message">Choose a section above to get started.</p>
+</div>
+</main>
+<footer>My Stream • Personal streaming hub</footer>
+<script>
+function show(section){
+document.getElementById('title').textContent=section;
+document.getElementById('message').textContent=
+section==='Home'?'Welcome to your streaming hub!':
+'This section needs a legitimate streaming source to play videos.';
+}
+</script>
+</body>
+</html>
